@@ -1,1 +1,1 @@
- "[Pertemuan 1] Installasi dan Pengenalan Laravel"
+"[Pertemuan 1] Installasi dan Pengenalan Laravel"

@@ -17,6 +17,9 @@
             {{ __('Dashboard') }}
           </flux:navlist.item>
           <flux:navlist.item icon="clipboard-document-list" :href="route('categories.index')" :current="request()->routeIs('categories.index')" wire:navigate>
+            {{ __('Categories') }}
+          </flux:navlist.item>
+          <flux:navlist.item icon="clipboard-document-list" :href="route('product.index')" :current="request()->routeIs('product.index')" wire:navigate>
             {{ __('Products') }}
           </flux:navlist.item>
         </flux:navlist.group>

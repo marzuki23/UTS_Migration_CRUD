@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomepageController;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\ProductCategoryController;
+use App\Http\Controllers\ProductController;
 
 Route::get('/',[HomePageController::class,'index'])->name('home');
 
@@ -22,6 +23,7 @@ Route::get('checkout', [HomePageController::class, 'checkout']);
 Route::group(['prefix'=>'dashboard'], function(){
     Route::get('/',[DashboardController::class,'index'])->name('dashboard');
     Route::resource('categories',ProductCategoryController::class);
+    Route::resource('product',ProductController::class);
    })->middleware(['auth', 'verified']);
    
 Route::view('dashboard', 'dashboard')

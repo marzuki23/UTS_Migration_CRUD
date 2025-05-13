@@ -1,7 +1,7 @@
 <x-layouts.app :title="__('products')">
     <div class="relative mb-6 w-full">
-        <flux:heading size="xl">Product</flux:heading>
-        <flux:subheading size="lg" class="mb-6">Manajemen Produk</flux:subheading>
+        <flux:heading size="xl">Categories</flux:heading>
+        <flux:subheading size="lg" class="mb-6">Manajemen Produk Category</flux:subheading>
         <flux:separator variant="subtle" />
     </div>
 
@@ -11,6 +11,7 @@
             <flux:input
                 icon="magnifying-glass"
                 name="q"
+                class="rounded-lg border-gray-300 focus:ring-2 focus:ring-blue-500 focus:border-blue-500 bg-gray-50 text-gray-700 placeholder-gray-400 hover:bg-gray-100 transition duration-200"
                 value="{{ $q }}"
                 placeholder="Search Product Categories"
             />

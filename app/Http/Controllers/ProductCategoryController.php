@@ -110,19 +110,6 @@ class ProductCategoryController extends Controller
         $category->slug        = $request->slug;
         $category->description = $request->description;
     
-        // if ($request->hasFile('image')) {
-        //     // Hapus gambar lama jika ada
-        //     if ($category->image && \Storage::disk('public')->exists($category->image)) {
-        //         \Storage::disk('public')->delete($category->image);
-        //     }
-    
-        //     // Simpan gambar baru
-        //     $image     = $request->file('image');
-        //     $imageName = time() . '_' . $image->getClientOriginalName();
-        //     $imagePath = $image->storeAs('uploads/categories', $imageName, 'public');
-        //     $category->image = $imagePath;
-        // }
-
         $category->image = $request->image;
     
         $category->save();

@@ -47,5 +47,20 @@ class HomePageController extends Controller
     public function checkout()
     {
         return view('web.checkout');
-    }  
+    } 
+
+    // Halaman login dan register
+    public function login()
+    {
+        return view('web.login', [
+            'title' => 'Login',
+        ]);
+    }
+
+    public function register()
+    {
+        return view('web.register', [
+            'title' => 'Register',
+        ]);
+    }
 }
